@@ -44,7 +44,7 @@ Once the specified period expires, the user can log in normally using their emai
   </ul>
   <hr>
 <h2>Progress:</h2>
-Currently we are working on front-end of the projects and verifying various options we can consider for website and its security mechanisms.
+Currently we are working on front-end of the projects and verifying various options we can consider for improvement website and its security mechanisms.
 <hr>
 <h2>Conclusion:</h2>
 This project not only replicates a standard login and sign-up system but also incorporates essential security features to protect user accounts from unauthorized access. The combination of user notifications and CAPTCHA verification ensures that legitimate users can maintain access while preventing potential attackers.
