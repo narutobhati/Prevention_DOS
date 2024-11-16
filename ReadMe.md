@@ -1,9 +1,9 @@
-<h1 align="center">Prevention of DOS for a login account</h1>
+<h1 align="center">Prevention and Mitigation of DDOS</h1>
 <h2>Team Members</h2>
 <ol type="1"><li>Navneet Priyadarshi(22BCS074)</li><li>Shruthik Sai(22BCS096)</li><li>Sanchay Awana(22BCS109)</li><li>Shaik Guffran Ahmed(22BCS112)</li></ol>
 <hr>
-<h2>About DOS attack</h2>
-<p>A Denial-of-Service (DOS) attack is a an attempt to disrupt the normal functioning of a targeted server,service,or network by overwhelming it with a flood of traffic or requests.The goal is to make the service unavailable to legitimate users.</p>
+<h2>About DDOS attack</h2>
+<p>A Distributed Denial-of-Service (DDoS) attack is a malicious attempt to disrupt the normal functioning of a server, service, or network by overwhelming it with a flood of traffic. This traffic typically comes from multiple sources, making it distributed and harder to mitigate.</p>
 <hr>
 <h2>Type of DOS attack we are trying to prevent:</h2>
 <p>Denial of Service (DOS) attack we aim to prevent is unauthorized login attempts that lead to account lockouts.This attack occurs when an unauthorized individual gains access to a user's device and attempts to log in with incorrect credentials multiple times.After a predetermined number of failed attempts,the account may be locked or services rendered inaccessible for a specific period of time(24hrs in most cases),denying the user access.</p>
