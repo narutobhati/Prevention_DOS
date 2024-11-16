@@ -5,49 +5,54 @@
 <h2>About DDOS attack</h2>
 <p>A Distributed Denial-of-Service (DDoS) attack is a malicious attempt to disrupt the normal functioning of a server, service, or network by overwhelming it with a flood of traffic. This traffic typically comes from multiple sources, making it distributed and harder to mitigate.</p>
 <hr>
-<h2>Type of DOS attack we are trying to prevent:</h2>
-<p>Denial of Service (DOS) attack we aim to prevent is unauthorized login attempts that lead to account lockouts.This attack occurs when an unauthorized individual gains access to a user's device and attempts to log in with incorrect credentials multiple times.After a predetermined number of failed attempts,the account may be locked or services rendered inaccessible for a specific period of time(24hrs in most cases),denying the user access.</p>
+<h2>Type of DDOS attack we are trying to prevent:</h2>
+<p>
+In our project, we are trying to prevent the following types of DDoS attacks:
+
+1. <b>Volumetric Attacks</b>: These are aimed at consuming the bandwidth of a targeted server, by involving large amounts of traffic.
+2. <b>Protocol Attacks</b>: These attacks consume server resources, such as CPU and memory, by exploiting weaknesses in the protocol stack.
+3. <b>Application Layer Attacks</b>: These attacks target the application layer, aiming to exhaust server resources by sending seemingly legitimate requests that are resource-intensive to process.
+
+We focus on detecting and mitigating these attacks in real-time, preventing them from affecting the performance and availability of the targeted system.</p>
 <hr>
 <h2>What are we trying to do?(Target of our project)</h2>
 <p><h3>Objective:</h3>
-Develop a website that mimics the login and sign-up pages of a typical application while implementing enhanced security measures to prevent unauthorized access through failed login attempts.
+Detect and mitigate DDoS attacks to prevent service disruption.
 <h3>Features:</h3>
-<h4>1.User Registration:</h4>
-Users can sign up by providing their email address and setting a secure password.
-<h4>2.Unauthorized Login Attempts:</h4>
-If an unauthorized user obtains the email address and tries to log in with incorrect passwords, the system will track these failed attempts.
-<h4>3.Failed Login Notification:</h4>
-<h5>After three consecutive failed login attempts:</h5>
-  <ul><li>The website will send an email notification to the legitimate user, informing them of the failed attempts.</li><li>The email will include a randomly generated CAPTCHA or numerical password.</li></ul>
-<h4>4.CAPTCHA Verification for Login:</h4>
-<h5>For the next login attempt (within a specified time frame):</h5>
-<ul><li>The user must input their email and the CAPTCHA received in the notification email.</li><li>As the unauthorized user will not have access to the personal email of real user due to two-step verification of email,preventing them from logging in.</li></ul>
-<h4>5.Resumption of Normal Access:</h4>
-Once the specified period expires, the user can log in normally using their email and password without needing the CAPTCHA.
+<ul><li>Monitors network traffic in real-time to identify patterns indicative of a DDoS attack.<br></li>
+<li>Classifies traffic as legitimate or malicious based on predefined attack signatures and abnormal traffic patterns.<br></li>
+<li>Implements mitigation strategies such as traffic filtering and rate-limiting to block malicious traffic while ensuring that legitimate requests are processed smoothly.</li>
+</ul>
+Our project uses various machine learning algorithms and various network monitoring tools to enhance the accuracy and effectiveness of attack detection and mitigation.
 <hr>
 <h2>Implementation Details:</h2>
-<ol type="1">
-  <li>Front-End: HTML, CSS, and JavaScript for user interfaces (sign-up and login pages).</li>
-  <li>Back-End: Server-side programming (e.g Node.js,Python,or any preferred language)
-  <br><h5>For handling:</h5>
-    <ul><li>User registration and password hashing.</li>
-      <li>Tracking login attempts and sending emails.</li>
-      <li>Generating random CAPTCHAs.</li></ul>
-  </li>
-  <li>Database: A secure database (e.g MongoDB,PostgreSQL,Mysql) to store user credentials and track login attempts.
-</li></ol>
+
+1. <b>Traffic Data Collection</b>: 
+   - Traffic data is collected from the network, which is then analyzed to detect unusual patterns.
+   
+2. <b>Traffic Classification</b>:
+   - Machine learning algorithms, specifically supervised learning techniques, are applied to classify network traffic as normal or DDoS attack traffic.
+   
+3. <b>Mitigation Techniques</b>:
+   - Once a DDoS attack is detected, mitigation measures such as IP blacklisting and traffic filtering are applied to block malicious traffic.
+   - We also implement rate-limiting for suspected IPs to prevent further damage.
+4. <b>Alerting and Logging</b>:
+   - The system sends alerts when an attack is detected, and logs all malicious activities for future analysis.
 <hr>
 <h2>Security Measures:</h2>
-  <ul>
-    <li>hashing (using bcrypt) for secure storage of user passwords.</li>
-    <li>Use of email sending methods to dispatch notifications to users.</li>
-  </ul>
+<ul>
+<li><b>Traffic Filtering</b>: Filters out malicious traffic based on known attack signatures and traffic patterns.<br></li>
+<li><b>Rate Limiting</b>: Controls the traffic flow from suspected sources to prevent excessive requests from overwhelming the server.<br></li>
+<li><b>IP Blocking</b>: Blocks IP addresses that are found to be generating attack traffic, preventing them from accessing the server.<br></li>
+<li><b>Real-Time Monitoring</b>: Continuously monitors traffic to ensure immediate detection and response to attacks.<br></li>
+</ul>
+In addition to these measures, we also use anomaly detection to identify any deviations from normal traffic patterns.
   <hr>
 <h2>Progress:</h2>
-Currently we are working on front-end of the project and verifying various options we can consider for improvement of the website and its security mechanisms.
+Completed 
 <hr>
 <h2>Conclusion:</h2>
-This project not only replicates a standard login and sign-up system but also incorporates essential security features to protect user accounts from unauthorized access. The combination of user notifications and CAPTCHA verification ensures that legitimate users can maintain access while preventing potential attackers.
+In this project, we have implemented a DDoS attack detection and mitigation system. By combining traffic monitoring, machine learning, and network filtering techniques, our system is capable of preventing DDoS attacks and ensuring the availability and stability of the targeted systems.
 <hr>
 </p>
 
